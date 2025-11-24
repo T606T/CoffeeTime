@@ -10,6 +10,7 @@ public partial class Form1 : Form
     private double initialMg;
     private Timer timer1; 
 
+    private List<Dose> doses = new();
     public Form1()
     {
         InitializeComponent();
