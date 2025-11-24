@@ -10,4 +10,8 @@ public class Dose
         Mg = mg;
         Timestamp = timestamp;
     }
+    public override string ToString()
+    {
+        return $"{Name} - {Mg} mg at {Timestamp:HH:mm}";
+    }
 }
