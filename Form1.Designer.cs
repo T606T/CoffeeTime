@@ -25,15 +25,15 @@ partial class Form1
 
     private void InitializeComponent()
     {
-        this.textBoxMg = new TextBox();
+        this.textBoxMg =    new TextBox();
 
-        this.buttonAdd = new Button();
+        this.buttonAdd =    new Button();
         this.buttonCoffee = new Button();
-        this.buttonTea = new Button();
+        this.buttonTea =    new Button();
         this.buttonEnergy = new Button();
         this.buttonDelete = new Button();
-
-        this.listBox1 = new ListBox();
+            
+        this.listBox1 =     new ListBox();
 
         this.labelPrediction = new Label();
         this.labelResult = new Label();
@@ -43,33 +43,33 @@ partial class Form1
         this.SuspendLayout();
 //-------------------------LAYOUT OF BUTTONS----------------------------------------//
         //Custom Button + custom amount
-        this.buttonAdd.Location = new System.Drawing.Point(240,25);
-        this.textBoxMg.Location = new System.Drawing.Point(130,25);
+        this.buttonAdd.Location = new System.Drawing.Point(240,35);
+        this.textBoxMg.Location = new System.Drawing.Point(130,35);
         this.buttonAdd.Size = new System.Drawing.Size(120,30);
         this.textBoxMg.Size = new System.Drawing.Size(100,30);
         //TimePicker
-        this.datetimePickerCustom.Location = new System.Drawing.Point(20,25);
+        this.datetimePickerCustom.Location = new System.Drawing.Point(20,35);
         this.datetimePickerCustom.Size = new System.Drawing.Size(100,30);
 
         //Coffee, Tea, Energy buttons
-        this.buttonCoffee.Location = new System.Drawing.Point(20, 60);
-        this.buttonTea.Location = new System.Drawing.Point(130, 60);
-        this.buttonEnergy.Location = new System.Drawing.Point(240, 60);
+        this.buttonCoffee.Location = new System.Drawing.Point(20, 70);
+        this.buttonTea.Location = new System.Drawing.Point(130, 70);
+        this.buttonEnergy.Location = new System.Drawing.Point(240, 70);
 
         this.buttonCoffee.Size = new System.Drawing.Size(100, 30);
         this.buttonTea.Size = new System.Drawing.Size(100, 30);
         this.buttonEnergy.Size = new System.Drawing.Size(120, 30);
         
         //listbox + delete
-        this.listBox1.Location = new System.Drawing.Point(20, 100);
+        this.listBox1.Location = new System.Drawing.Point(20, 110);
         this.listBox1.Size = new System.Drawing.Size(240, 40);
-        this.buttonDelete.Location = new System.Drawing.Point(270, 100);
+        this.buttonDelete.Location = new System.Drawing.Point(270, 110);
         this.buttonDelete.Size = new System.Drawing.Size(90, 30);
         
         //Labels
-        this.labelResult.Location = new System.Drawing.Point(40, 270);
+        this.labelResult.Location = new System.Drawing.Point(40, 160);
         this.labelResult.Size = new System.Drawing.Size(300, 23);
-        this.labelPrediction.Location = new System.Drawing.Point(190, 270);
+        this.labelPrediction.Location = new System.Drawing.Point(190, 160);
         this.labelPrediction.Size = new System.Drawing.Size(300, 23);
         
         // labelPrediction
@@ -84,25 +84,21 @@ partial class Form1
         // Coffee button
         this.buttonCoffee.Name = "buttonCoffee";
         this.buttonCoffee.Text = "Coffee";
-        this.buttonCoffee.UseVisualStyleBackColor = true;
         this.buttonCoffee.Click += buttonCoffee_Click;
 
         // Tea button
         this.buttonTea.Name = "buttonTea";
         this.buttonTea.Text = "Tea";
-        this.buttonTea.UseVisualStyleBackColor = true;
         this.buttonTea.Click += buttonTea_Click;
 
         // Energy Drink button
         this.buttonEnergy.Name = "buttonEnergy";
         this.buttonEnergy.Text = "Energy Drink";
-        this.buttonEnergy.UseVisualStyleBackColor = true;
         this.buttonEnergy.Click += buttonEnergyDrink_Click;
 
         //Custom button
         this.buttonAdd.Name = "CustomAdd";
         this.buttonAdd.Text = "Custom Beverage";
-        this.buttonAdd.UseVisualStyleBackColor = true;
         this.buttonAdd.Click += buttonAdd_Click;
 
         // ListBox
@@ -111,15 +107,18 @@ partial class Form1
         // Delete button
         this.buttonDelete.Name = "buttonDelete";
         this.buttonDelete.Text = "Delete Dose";
-        this.buttonDelete.UseVisualStyleBackColor = true;
         this.buttonDelete.Click += buttonDelete_Click;
+
+        //TextBoxMg
+        this.textBoxMg.BackColor = Color.FromArgb(35,35,35);
+        this.textBoxMg.ForeColor = Color.White;
+
         
         //DateTimePicker
         this.datetimePickerCustom.Format = DateTimePickerFormat.Time;
         this.datetimePickerCustom.ShowUpDown = true;
 
         // Form1
-        this.AutoScaleMode = AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(380, 330);
         
         this.Controls.Add(this.textBoxMg);

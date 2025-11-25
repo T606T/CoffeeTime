@@ -12,7 +12,9 @@ public partial class Form1 : Form
     public Form1()
     {
         InitializeComponent();
-
+        //STYLE
+        ModernUI.ApplyModernTheme(this);
+        //TIMERS
         timer1 = new Timer();
         timer1.Interval = 1000;
         timer1.Tick += timer1_Tick;
@@ -31,21 +33,18 @@ public partial class Form1 : Form
     {
         doses.Add(new Dose("Coffee", 90, DateTime.Now));
         RefreshDoseList();
-        UpdatePlot();
         UpdatePrediction();
     }
     private void buttonTea_Click(object sender, EventArgs e)
     {
         doses.Add(new Dose("Tea", 55, DateTime.Now));
         RefreshDoseList();
-        UpdatePlot();
         UpdatePrediction();
     }
     private void buttonEnergyDrink_Click(object sender, EventArgs e)
     {
         doses.Add(new Dose("Energy Drink", 200, DateTime.Now));
         RefreshDoseList();
-        UpdatePlot();
         UpdatePrediction();
     }
     private void buttonDelete_Click(object sender, EventArgs e)
@@ -55,7 +54,6 @@ public partial class Form1 : Form
         {
         doses.Remove(selected);
         RefreshDoseList();
-        UpdatePlot();
         UpdatePrediction();
         }
     }
@@ -75,12 +73,6 @@ public partial class Form1 : Form
             MessageBox.Show("Please enter a valid number.");
         }
     }
-
-    private void UpdatePlot()
-    {
-        // TODO: add ScottPlot or chart here
-    }
-
     private void UpdatePrediction()
     {
         double halfLife = 5.0;
