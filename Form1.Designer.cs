@@ -43,33 +43,33 @@ partial class Form1
         this.SuspendLayout();
 //-------------------------LAYOUT OF BUTTONS----------------------------------------//
         //Custom Button + custom amount
-        this.buttonAdd.Location = new System.Drawing.Point(240,35);
-        this.textBoxMg.Location = new System.Drawing.Point(130,35);
+        this.buttonAdd.Location = new System.Drawing.Point(240,15);
+        this.textBoxMg.Location = new System.Drawing.Point(130,15);
         this.buttonAdd.Size = new System.Drawing.Size(120,30);
         this.textBoxMg.Size = new System.Drawing.Size(100,30);
         //TimePicker
-        this.datetimePickerCustom.Location = new System.Drawing.Point(20,35);
+        this.datetimePickerCustom.Location = new System.Drawing.Point(20,15);
         this.datetimePickerCustom.Size = new System.Drawing.Size(100,30);
 
         //Coffee, Tea, Energy buttons
-        this.buttonCoffee.Location = new System.Drawing.Point(20, 70);
-        this.buttonTea.Location = new System.Drawing.Point(130, 70);
-        this.buttonEnergy.Location = new System.Drawing.Point(240, 70);
+        this.buttonCoffee.Location = new System.Drawing.Point(20, 50);
+        this.buttonTea.Location = new System.Drawing.Point(130, 50);
+        this.buttonEnergy.Location = new System.Drawing.Point(240, 50);
 
         this.buttonCoffee.Size = new System.Drawing.Size(100, 30);
         this.buttonTea.Size = new System.Drawing.Size(100, 30);
         this.buttonEnergy.Size = new System.Drawing.Size(120, 30);
         
         //listbox + delete
-        this.listBox1.Location = new System.Drawing.Point(20, 110);
+        this.listBox1.Location = new System.Drawing.Point(20, 90);
         this.listBox1.Size = new System.Drawing.Size(240, 40);
-        this.buttonDelete.Location = new System.Drawing.Point(270, 110);
+        this.buttonDelete.Location = new System.Drawing.Point(270, 90);
         this.buttonDelete.Size = new System.Drawing.Size(90, 30);
         
         //Labels
-        this.labelResult.Location = new System.Drawing.Point(40, 160);
+        this.labelResult.Location = new System.Drawing.Point(40, 140);
         this.labelResult.Size = new System.Drawing.Size(300, 23);
-        this.labelPrediction.Location = new System.Drawing.Point(190, 160);
+        this.labelPrediction.Location = new System.Drawing.Point(190, 140);
         this.labelPrediction.Size = new System.Drawing.Size(300, 23);
         
         // labelPrediction
@@ -119,7 +119,7 @@ partial class Form1
         this.datetimePickerCustom.ShowUpDown = true;
 
         // Form1
-        this.ClientSize = new System.Drawing.Size(380, 330);
+        this.ClientSize = new System.Drawing.Size(380, 170);
         
         this.Controls.Add(this.textBoxMg);
         this.Controls.Add(this.labelResult);
