@@ -36,7 +36,7 @@ public partial class Form1 : Form
     }
     private void buttonTea_Click(object sender, EventArgs e)
     {
-        doses.Add(new Dose("Tea", 50, DateTime.Now));
+        doses.Add(new Dose("Tea", 55, DateTime.Now));
         RefreshDoseList();
         UpdatePlot();
         UpdatePrediction();
@@ -64,11 +64,10 @@ public partial class Form1 : Form
     {
         if (double.TryParse(textBoxMg.Text, out double mg))
         {
-            doses.Add(new Dose("Custom", mg, DateTime.Now));
+            DateTime ingestedTime = datetimePickerCustom?.Value ?? DateTime.Now;
+            doses.Add(new Dose("Custom", mg, ingestedTime));
             textBoxMg.Clear();
-
             RefreshDoseList();
-            UpdatePlot();
             UpdatePrediction();
         }
         else
@@ -87,14 +86,14 @@ public partial class Form1 : Form
         double halfLife = 5.0;
         double k = Math.Log(2) / halfLife;
 
-        double threshold = 50.0; // mg to go to sleep
+        double threshold = 40.0; // mg to go to sleep
         double C = ComputeTotalCaffeine();
 
         // Si el total ya está por debajo, actualizamos la UI y salimos
         if (C <= threshold)
         {
             if (labelPrediction != null)
-                labelPrediction.Text = "Below 50 mg: now";
+                labelPrediction.Text = "Below 40 mg: now";
             else
                 labelResult.Text = $"Caffeine now: {C:F1} mg  (Safe now)";
             return;
@@ -120,9 +119,9 @@ public partial class Form1 : Form
         DateTime safeTime = DateTime.Now.AddHours(hoursToSafe);
 
         if (labelPrediction != null)
-            labelPrediction.Text = $"Below 50 mg at: {safeTime:HH:mm}";
+            labelPrediction.Text = $"Below 40 mg at: {safeTime:HH:mm}";
         else
-            labelResult.Text = $"Caffeine now: {C:F1} mg  (Below 50 mg at {safeTime:HH:mm})";
+            labelResult.Text = $"Caffeine now: {C:F1} mg  (Below 40 mg at {safeTime:HH:mm})";
     }
 
     
